@@ -36,7 +36,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="yOS-yH-icF" kind="presentation" id="i8X-AB-WDt"/>
+                                    <segue destination="yOS-yH-icF" kind="presentation" identifier="next" id="i8X-AB-WDt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,7 +66,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="神奈川県"/>
                                 <connections>
                                     <action selector="kanagawaButton:" destination="KON-rd-xWA" eventType="touchUpInside" id="hWy-kQ-y7u"/>
-                                    <segue destination="rYD-VL-Cz7" kind="unwind" unwindAction="exitDoneWithSegue:" id="ljI-Uq-laD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPE-3U-1r5">
@@ -76,7 +75,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="埼玉県"/>
                                 <connections>
                                     <action selector="saitamaButton:" destination="KON-rd-xWA" eventType="touchUpInside" id="8rN-bh-vHs"/>
-                                    <segue destination="rYD-VL-Cz7" kind="unwind" unwindAction="exitDoneWithSegue:" id="sia-4n-GF5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uo-ut-xXJ">
@@ -86,7 +84,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="千葉県"/>
                                 <connections>
                                     <action selector="chibaButton:" destination="KON-rd-xWA" eventType="touchUpInside" id="TEN-P1-vxx"/>
-                                    <segue destination="rYD-VL-Cz7" kind="unwind" unwindAction="exitDoneWithSegue:" id="CBw-Df-w9L"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-oF-jGr">
@@ -96,7 +93,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="東京都"/>
                                 <connections>
                                     <action selector="tokyoButton:" destination="KON-rd-xWA" eventType="touchUpInside" id="KeL-mc-ReA"/>
-                                    <segue destination="rYD-VL-Cz7" kind="unwind" unwindAction="exitDoneWithSegue:" id="3vZ-vP-YWl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,6 +106,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="rYD-VL-Cz7" kind="unwind" identifier="first" unwindAction="exitDoneWithSegue:" id="et1-d4-alJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMJ-eO-0F2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rYD-VL-Cz7" userLabel="Exit" sceneMemberID="exit"/>

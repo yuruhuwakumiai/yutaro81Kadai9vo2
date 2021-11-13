@@ -11,18 +11,22 @@ class NextViewController: UIViewController {
     var textlabel: String?
     @IBAction private func tokyoButton(_ sender: Any) {
         textlabel = "東京都"
+        self .performSegue(withIdentifier: "first", sender: self)
     }
 
     @IBAction private func kanagawaButton(_ sender: Any) {
         textlabel = "神奈川県"
+        self .performSegue(withIdentifier: "first", sender: self)
     }
 
     @IBAction private func saitamaButton(_ sender: Any) {
         textlabel = "埼玉県"
+        self .performSegue(withIdentifier: "first", sender: self)
     }
 
     @IBAction private func chibaButton(_ sender: Any) {
         textlabel = "千葉県"
+        self .performSegue(withIdentifier: "first", sender: self)
     }
 }
 // 2021.11.12  修正考案1
@@ -34,7 +38,7 @@ class NextViewController: UIViewController {
 //    @IBOutlet weak private var button3: UIButton!
 //    @IBOutlet weak private var button4: UIButton!
 //
-//        var inputText: String?
+//    var inputText: String?
 //    private var timingData: Int = 0
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
