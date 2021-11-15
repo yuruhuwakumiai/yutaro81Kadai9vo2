@@ -8,25 +8,27 @@
 import UIKit
 
 class NextViewController: UIViewController {
-    var textlabel: String?
+    private(set) var selectedPrefectureName: String?
+    
     @IBAction private func tokyoButton(_ sender: Any) {
-        textlabel = "東京都"
-        self .performSegue(withIdentifier: "first", sender: self)
+        exitBySegue(prefectureName: "東京都")
     }
 
     @IBAction private func kanagawaButton(_ sender: Any) {
-        textlabel = "神奈川県"
-        self .performSegue(withIdentifier: "first", sender: self)
+        exitBySegue(prefectureName: "神奈川県")
     }
 
     @IBAction private func saitamaButton(_ sender: Any) {
-        textlabel = "埼玉県"
-        self .performSegue(withIdentifier: "first", sender: self)
+        exitBySegue(prefectureName: "埼玉県")
     }
 
     @IBAction private func chibaButton(_ sender: Any) {
-        textlabel = "千葉県"
-        self .performSegue(withIdentifier: "first", sender: self)
+        exitBySegue(prefectureName: "千葉県")
+    }
+    
+    private func exitBySegue(prefectureName: String) {
+        selectedPrefectureName = prefectureName
+        performSegue(withIdentifier: "first", sender: self)
     }
 }
 // 2021.11.12  修正考案1
