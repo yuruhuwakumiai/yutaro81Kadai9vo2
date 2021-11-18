@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBAction private func exitDone(segue: UIStoryboardSegue) {
         let nextVC = segue.source as? NextViewController
-        resultLabel.text = nextVC?.textlabel
+        resultLabel.text = nextVC?.selectedPrefectureName
     }
 
     @IBAction private func exit(segue: UIStoryboardSegue) {
